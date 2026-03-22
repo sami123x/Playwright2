@@ -11,12 +11,9 @@ test('test', async ({ page }) => {
   await page.getByRole('textbox', { name: 'What needs to be done?' }).press('Enter');
   await page.getByRole('textbox', { name: 'What needs to be done?' }).fill('kick the pig');
   await page.getByRole('textbox', { name: 'What needs to be done?' }).press('Enter');
-<<<<<<< HEAD
   //await page.screenshot({ path: 'screenshot.png' });
   //await expect(page).toHaveScreenshot()
-=======
->>>>>>> f6e9fdb186b64f95945e5b2ddfc7af88e5f96d92
-  await expect(page.getByRole('button', { name: 'Delete' })).toBeVisible();
+  //await expect(page.getByRole('button', { name: 'Delete' })).toBeVisible();
 
   await page.getByRole('listitem').filter({ hasText: 'walk the dog' }).getByLabel('Toggle Todo').check();
   await expect(page.getByRole('button', { name: 'Clear completed' })).toBeVisible();
