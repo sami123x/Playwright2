@@ -11,7 +11,7 @@ test('test', async ({ page }) => {
   await page.getByRole('textbox', { name: 'What needs to be done?' }).press('Enter');
   await page.getByRole('textbox', { name: 'What needs to be done?' }).fill('kick the pig');
   await page.getByRole('textbox', { name: 'What needs to be done?' }).press('Enter');
-//  await expect(page.getByRole('button', { name: 'Delete' })).toBeVisible();
+  await expect(page.getByRole('button', { name: 'Delete' })).toBeVisible();
 
   await page.getByRole('listitem').filter({ hasText: 'walk the dog' }).getByLabel('Toggle Todo').check();
   await expect(page.getByRole('button', { name: 'Clear completed' })).toBeVisible();
